@@ -6,4 +6,10 @@ function M.setup(p_conf)
   print(vim.inspect(conf))
 end
 
+vim.api.nvim_create_autocmd("CursorMoved", {
+  callback = function()
+    require("gitlens.renderer.virtual_text").x("Hello, World!")
+  end
+})
+
 return M
