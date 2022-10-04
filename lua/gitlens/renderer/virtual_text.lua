@@ -7,8 +7,7 @@ function M.create_virtual_text(text)
   local line = vim.api.nvim_win_get_cursor(0)
   vim.api.nvim_buf_set_extmark(0, 9, line[1] - 1, 0, {
     virt_text = {{
-      string.format("    %s  %s", settings.current.DEFAULT_SETTINGS.ui.logo, text),
-      "gitlens_blame"
+      string.format("    %s %s", settings.current.ui.logo, text), "gitlens_blame"
     }},
   })
 end

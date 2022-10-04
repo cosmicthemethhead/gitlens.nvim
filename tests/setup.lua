@@ -1,5 +1,12 @@
 local gitlens = require("gitlens")
 
 gitlens.setup {
-  x = "Hello, World!"
+  ui = {
+    logo = ''
+  },
+
+  disabled_filetypes = {
+    "NvimTree",
+    "mason",
+  }
 }
