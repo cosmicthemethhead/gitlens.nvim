@@ -10,6 +10,8 @@ function M.setup(config)
     settings.set(config)
   end
 
+  local username = git.get_username()
+
   vim.api.nvim_create_autocmd("CursorMoved", {
     callback = function()
       -- HACK: checks on every cursor movement
@@ -19,7 +21,8 @@ function M.setup(config)
 
       virt_txt.create_virtual_text(git.get_blame(
         vim.fn.expand("%"),
-        vim.api.nvim_win_get_cursor(0)
+        vim.api.nvim_win_get_cursor(0),
+        username
       ))
     end
   })
