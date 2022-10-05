@@ -1,5 +1,6 @@
 local settings = require "gitlens.settings"
 local virt_txt = require "gitlens.ui.virtual_text"
+local git = require "gitlens.api.git"
 
 local M = { }
 
@@ -16,7 +17,7 @@ function M.setup(config)
         if vim.bo.filetype == v then return end
       end
 
-      virt_txt.create_virtual_text("Hello, World!")
+      virt_txt.create_virtual_text(git.get_blame())
     end
   })
 end
