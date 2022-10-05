@@ -5,11 +5,11 @@
 </div>
 
 ## Installation
-##### Requirements
+#### Requirements
 * [**git**](https://git-scm.com/downloads)
 * a nerdfont (I recomend [***JetBrains Mono***]())
 
-##### Using a Package Mgr
+#### Using a Package Mgr
 <details>
   <summary><b>
     Packer
