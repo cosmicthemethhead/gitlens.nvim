@@ -1,5 +1,5 @@
 local settings = require "gitlens.settings"
-local virt_txt = require "gitlens.renderer.virtual_text"
+local virt_txt = require "gitlens.ui.virtual_text"
 
 local M = { }
 
