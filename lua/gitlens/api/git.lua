@@ -1,4 +1,5 @@
 local M = { }
+local settings = require "gitlens.settings"
 
 local function git_cmd(cmd)
   local txt = vim.fn.system(cmd)
@@ -20,7 +21,7 @@ function M.get_blame(file, line, int_username)
   else
     local username = git_cmd(string.format("git show %s ", hash).."--format='%an'")
     if username == int_username then
-      username = "You"
+      username = settings.current.ui.username
     end
 
     local cmd = string.format("git show %s --format='%s %s'",

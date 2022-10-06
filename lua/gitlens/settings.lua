@@ -3,10 +3,11 @@ local M = { }
 --- @class GitlensSettings
 local DEFAULT_SETTINGS = {
   ui = {
-    logo = ''
+    logo = '',
+    username = "You",
   },
 
-  disabled_filetypes = { }
+  disabled_filetypes = { },
 }
 
 M._DEFAULT_SETTINGS = DEFAULT_SETTINGS
