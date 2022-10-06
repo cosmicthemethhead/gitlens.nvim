@@ -28,7 +28,7 @@ end
 
 function M.disable()
   api.nvim_buf_clear_namespace(0, 9, 0, -1)
-  api.nvim_del_augroup_by_name("GitlensBlame")
+  api.nvim_del_augroup_by_name "GitlensBlame"
 end
 
 --- @param config GitlensSettings?
@@ -38,6 +38,17 @@ function M.setup(config)
   end
 
   M.enable()
+
+  vim.api.nvim_create_autocmd("BufEnter", {
+    callback = function()
+      if vim.bo.buftype ~= "" then
+        M.disable()
+        return
+      end
+
+      M.enable()
+    end,
+  })
 end
 
 return M
