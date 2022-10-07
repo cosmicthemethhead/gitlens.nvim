@@ -5,6 +5,10 @@
 </div>
 
 ## Installation
+
+> PLEASE NOTE: this plugin is in the very early stages of developement and is not fully functional\
+also, git contrabutions would be greatly appreciated please see [CONTRIBUTING.md](.github/CONTRIBUTING.md)
+
 #### Requirements
 * [**git**](https://git-scm.com/downloads)
 * a nerdfont (I recomend [***JetBrains Mono***]())
